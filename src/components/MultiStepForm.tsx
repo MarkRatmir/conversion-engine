@@ -29,10 +29,30 @@ const MultiStepForm = () => {
     return false;
   };
 
-  const handleSubmit = () => {
-    // In production, this would POST to a Make.com webhook
-    console.log("Form submitted:", form);
-    setSubmitted(true);
+  const handleSubmit = async () => {
+    try {
+      // Replace the URL below with your actual Make.com Webhook URL
+      const webhookUrl = "https://hook.eu1.make.com/lg1unpe79xflnp4riywk6lzdbcls644l";
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        console.log("Form successfully sent to Make.com");
+        setSubmitted(true);
+      } else {
+        console.error("Submission failed.");
+        alert("There was an error sending your request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Network error. Please check your connection.");
+    }
   };
 
   if (submitted) {

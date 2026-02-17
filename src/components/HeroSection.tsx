@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 border-primary/50 text-primary hover:bg-primary hover:text-white backdrop-blur"
+              className="text-lg px-8 py-6 border-primary/50 text-primary hover:bg-primary/10 hover:text-white backdrop-blur"
               asChild
             >
               <a href="tel:+3721234567">

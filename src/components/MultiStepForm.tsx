@@ -4,11 +4,11 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, ArrowLeft, CheckCircle2, Zap } from "lucide-react";
 
 const projectTypes = [
-  "Full Roof Replacement",
-  "Roof Repair",
-  "New Construction",
-  "Insulation & Waterproofing",
-  "Inspection & Consultation",
+  "Katuse täisvahetus",
+  "Katuse remont",
+  "Uusehitus",
+  "Soojustus ja hüdroisolatsioon",
+  "Ülevaatus ja konsultatsioon",
 ];
 
 const MultiStepForm = () => {
@@ -31,7 +31,6 @@ const MultiStepForm = () => {
 
   const handleSubmit = async () => {
     try {
-      // Replace the URL below with your actual Make.com Webhook URL
       const webhookUrl = "https://hook.eu1.make.com/lg1unpe79xflnp4riywk6lzdbcls644l";
 
       const response = await fetch(webhookUrl, {
@@ -47,11 +46,11 @@ const MultiStepForm = () => {
         setSubmitted(true);
       } else {
         console.error("Submission failed.");
-        alert("There was an error sending your request. Please try again.");
+        alert("Päringu saatmisel tekkis viga. Palun proovige uuesti.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Network error. Please check your connection.");
+      alert("Võrgu viga. Palun kontrollige ühendust.");
     }
   };
 
@@ -61,10 +60,10 @@ const MultiStepForm = () => {
         <div className="mx-auto w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center">
           <CheckCircle2 className="h-8 w-8 text-primary" />
         </div>
-        <h3 className="text-2xl font-bold">Quote Request Received!</h3>
+        <h3 className="text-2xl font-bold">Hinnapäring vastu võetud!</h3>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Our site foreman has been notified via WhatsApp. Expect a call within 2 minutes
-          during business hours.
+          Meie objektijuhti on teavitatud WhatsAppi kaudu. Oodake kõnet 2 minuti jooksul
+          tööajal.
         </p>
       </div>
     );
@@ -72,7 +71,7 @@ const MultiStepForm = () => {
 
   return (
     <div className="space-y-8">
-      {/* Progress */}
+      {/* Edenemine */}
       <div className="flex items-center gap-2">
         {[1, 2, 3].map((s) => (
           <div key={s} className="flex items-center gap-2 flex-1">
@@ -85,12 +84,12 @@ const MultiStepForm = () => {
         ))}
       </div>
 
-      {/* Step 1 */}
+      {/* Samm 1 */}
       {step === 1 && (
         <div className="space-y-6 animate-fade-in">
           <div>
-            <h3 className="text-xl font-bold mb-1">What project do you need?</h3>
-            <p className="text-sm text-muted-foreground">Select the type of work</p>
+            <h3 className="text-xl font-bold mb-1">Millist projekti vajate?</h3>
+            <p className="text-sm text-muted-foreground">Valige töö tüüp</p>
           </div>
           <div className="grid gap-3">
             {projectTypes.map((type) => (
@@ -110,27 +109,27 @@ const MultiStepForm = () => {
         </div>
       )}
 
-      {/* Step 2 */}
+      {/* Samm 2 */}
       {step === 2 && (
         <div className="space-y-6 animate-fade-in">
           <div>
-            <h3 className="text-xl font-bold mb-1">Location & Size</h3>
-            <p className="text-sm text-muted-foreground">Help us understand the scope</p>
+            <h3 className="text-xl font-bold mb-1">Asukoht ja suurus</h3>
+            <p className="text-sm text-muted-foreground">Aidake meil mahtu mõista</p>
           </div>
           <div className="space-y-4">
             <div>
-              <label className="text-sm font-medium mb-2 block">Location / Address</label>
+              <label className="text-sm font-medium mb-2 block">Asukoht / Aadress</label>
               <Input
-                placeholder="e.g. Tallinn, Haabersti district"
+                placeholder="nt Tallinn, Haabersti linnaosa"
                 value={form.location}
                 onChange={(e) => setForm({ ...form, location: e.target.value })}
                 className="py-5"
               />
             </div>
             <div>
-              <label className="text-sm font-medium mb-2 block">Approximate Size (m²)</label>
+              <label className="text-sm font-medium mb-2 block">Ligikaudne suurus (m²)</label>
               <Input
-                placeholder="e.g. 120"
+                placeholder="nt 120"
                 type="number"
                 value={form.size}
                 onChange={(e) => setForm({ ...form, size: e.target.value })}
@@ -141,25 +140,25 @@ const MultiStepForm = () => {
         </div>
       )}
 
-      {/* Step 3 */}
+      {/* Samm 3 */}
       {step === 3 && (
         <div className="space-y-6 animate-fade-in">
           <div>
-            <h3 className="text-xl font-bold mb-1">Your Contact Details</h3>
-            <p className="text-sm text-muted-foreground">We'll reach out within minutes</p>
+            <h3 className="text-xl font-bold mb-1">Teie kontaktandmed</h3>
+            <p className="text-sm text-muted-foreground">Võtame teiega ühendust minutitega</p>
           </div>
           <div className="space-y-4">
             <div>
-              <label className="text-sm font-medium mb-2 block">Your Name</label>
+              <label className="text-sm font-medium mb-2 block">Teie nimi</label>
               <Input
-                placeholder="e.g. Andres"
+                placeholder="nt Andres"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="py-5"
               />
             </div>
             <div>
-              <label className="text-sm font-medium mb-2 block">Phone / WhatsApp</label>
+              <label className="text-sm font-medium mb-2 block">Telefon / WhatsApp</label>
               <Input
                 placeholder="+372 ..."
                 type="tel"
@@ -172,7 +171,7 @@ const MultiStepForm = () => {
         </div>
       )}
 
-      {/* Nav */}
+      {/* Navigeerimine */}
       <div className="flex gap-3">
         {step > 1 && (
           <Button
@@ -181,7 +180,7 @@ const MultiStepForm = () => {
             className="py-5 px-6"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back
+            Tagasi
           </Button>
         )}
         {step < 3 ? (
@@ -190,7 +189,7 @@ const MultiStepForm = () => {
             onClick={() => setStep(step + 1)}
             className="flex-1 py-5 bg-primary hover:bg-orange-glow text-primary-foreground"
           >
-            Next
+            Edasi
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         ) : (
@@ -199,16 +198,16 @@ const MultiStepForm = () => {
             onClick={handleSubmit}
             className="flex-1 py-5 bg-primary hover:bg-orange-glow text-primary-foreground"
           >
-            Submit Quote Request
+            Saada hinnapäring
           </Button>
         )}
       </div>
 
-      {/* Live sync badge */}
+      {/* Reaalajas sünkroonimine */}
       <div className="flex justify-center">
         <div className="badge-live text-xs">
           <Zap className="h-3 w-3" />
-          <span>Live Sync: Submissions alert our site foreman via WhatsApp instantly</span>
+          <span>Reaalajas sünkroonimine: Päringud teavitavad meie objektijuhti WhatsAppi kaudu koheselt</span>
         </div>
       </div>
     </div>

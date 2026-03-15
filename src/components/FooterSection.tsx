@@ -7,9 +7,9 @@ const FooterSection = () => {
             Tallinn <span className="text-primary">Premium</span> Roofing
           </div>
           <div className="flex gap-8 text-sm text-charcoal-foreground/50">
-            <span>© 2026 All rights reserved</span>
-            <a href="#" className="hover:text-charcoal-foreground/80 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-charcoal-foreground/80 transition-colors">Terms</a>
+            <span>© 2026 Kõik õigused kaitstud</span>
+            <a href="#" className="hover:text-charcoal-foreground/80 transition-colors">Privaatsus</a>
+            <a href="#" className="hover:text-charcoal-foreground/80 transition-colors">Tingimused</a>
           </div>
         </div>
       </div>

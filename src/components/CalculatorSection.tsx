@@ -32,7 +32,7 @@ const CalculatorSection = () => {
               <span className="font-semibold text-sm uppercase tracking-wider">Hinnakalkulaator</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl">
-              Saage kohene <span className="text-primary">hinnavahem</span>
+              Saage kohene <span className="text-primary">hinnavahemik</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Valige katuse tüüp ja pindala, et näha ligikaudset hinnavahemikku.

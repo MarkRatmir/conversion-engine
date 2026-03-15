@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 
 const roofTypes = [
-  { label: "Metal", pricePerSqm: [45, 75] },
-  { label: "Tile", pricePerSqm: [55, 90] },
-  { label: "Flat / Bitumen", pricePerSqm: [35, 60] },
-  { label: "Slate", pricePerSqm: [70, 120] },
+  { label: "Metall", pricePerSqm: [45, 75] },
+  { label: "Kivi", pricePerSqm: [55, 90] },
+  { label: "Lame / Bituumen", pricePerSqm: [35, 60] },
+  { label: "Kiltkivi", pricePerSqm: [70, 120] },
 ];
 
 const CalculatorSection = () => {
@@ -29,21 +29,21 @@ const CalculatorSection = () => {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 text-primary">
               <Calculator className="h-5 w-5" />
-              <span className="font-semibold text-sm uppercase tracking-wider">Price Estimator</span>
+              <span className="font-semibold text-sm uppercase tracking-wider">Hinnakalkulaator</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl">
-              Get an Instant <span className="text-primary">Price Range</span>
+              Saage kohene <span className="text-primary">hinnavahem</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Select your roof type and area to see an estimated price range. 
-              For a precise quote, submit the form below.
+              Valige katuse tüüp ja pindala, et näha ligikaudset hinnavahemikku.
+              Täpse pakkumise saamiseks täitke allolev vorm.
             </p>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8 space-y-8 shadow-sm">
-            {/* Roof Type */}
+            {/* Katuse tüüp */}
             <div className="space-y-3">
-              <label className="text-sm font-medium text-foreground">Roof Type</label>
+              <label className="text-sm font-medium text-foreground">Katuse tüüp</label>
               <div className="grid grid-cols-2 gap-3">
                 {roofTypes.map((t, i) => (
                   <button
@@ -61,10 +61,10 @@ const CalculatorSection = () => {
               </div>
             </div>
 
-            {/* Area Slider */}
+            {/* Pindala liugur */}
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <label className="text-sm font-medium text-foreground">Roof Area</label>
+                <label className="text-sm font-medium text-foreground">Katuse pindala</label>
                 <span className="text-2xl font-bold text-primary">{sqm} m²</span>
               </div>
               <Slider
@@ -81,14 +81,14 @@ const CalculatorSection = () => {
               </div>
             </div>
 
-            {/* Result */}
+            {/* Tulemus */}
             <div className="rounded-xl bg-charcoal p-6 text-center space-y-2">
-              <p className="text-sm text-charcoal-foreground/60">Estimated Price Range</p>
+              <p className="text-sm text-charcoal-foreground/60">Ligikaudne hinnavahemik</p>
               <p className="text-3xl font-bold text-charcoal-foreground">
                 €{low.toLocaleString()} – €{high.toLocaleString()}
               </p>
               <p className="text-xs text-charcoal-foreground/40">
-                Includes materials, labor & warranty
+                Sisaldab materjale, tööjõudu ja garantiid
               </p>
             </div>
 
@@ -96,7 +96,7 @@ const CalculatorSection = () => {
               onClick={scrollToForm}
               className="w-full py-6 text-lg bg-primary hover:bg-orange-glow text-primary-foreground shadow-lg shadow-primary/20"
             >
-              Get Your Exact Quote
+              Küsige täpset pakkumist
             </Button>
           </div>
         </div>

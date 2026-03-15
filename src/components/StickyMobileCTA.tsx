@@ -8,7 +8,7 @@ const StickyMobileCTA = () => {
         className="flex items-center justify-center gap-2 bg-primary text-primary-foreground py-4 font-semibold text-lg shadow-lg shadow-primary/30"
       >
         <Phone className="h-5 w-5" />
-        Call Now — Free Estimate
+        Helista kohe — Tasuta hinnang
       </a>
     </div>
   );

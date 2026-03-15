@@ -19,8 +19,8 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#testimonials" className="text-sm text-charcoal-foreground/70 hover:text-charcoal-foreground transition-colors">Reviews</a>
-          <a href="#calculator" className="text-sm text-charcoal-foreground/70 hover:text-charcoal-foreground transition-colors">Pricing</a>
+          <a href="#testimonials" className="text-sm text-charcoal-foreground/70 hover:text-charcoal-foreground transition-colors">Arvustused</a>
+          <a href="#calculator" className="text-sm text-charcoal-foreground/70 hover:text-charcoal-foreground transition-colors">Hinnakiri</a>
           <a href="tel:+3721234567" className="text-sm text-charcoal-foreground/70 hover:text-charcoal-foreground transition-colors flex items-center gap-1">
             <Phone className="h-3.5 w-3.5" />
             +372 123 4567
@@ -30,7 +30,7 @@ const Navbar = () => {
             onClick={scrollToForm}
             className="bg-primary hover:bg-orange-glow text-primary-foreground"
           >
-            Get a Quote
+            Küsi pakkumist
           </Button>
         </div>
 
@@ -43,10 +43,10 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-charcoal border-t border-charcoal-light px-4 pb-6 pt-4 space-y-4">
-          <a href="#testimonials" onClick={() => setOpen(false)} className="block text-charcoal-foreground/70 py-2">Reviews</a>
-          <a href="#calculator" onClick={() => setOpen(false)} className="block text-charcoal-foreground/70 py-2">Pricing</a>
+          <a href="#testimonials" onClick={() => setOpen(false)} className="block text-charcoal-foreground/70 py-2">Arvustused</a>
+          <a href="#calculator" onClick={() => setOpen(false)} className="block text-charcoal-foreground/70 py-2">Hinnakiri</a>
           <Button onClick={scrollToForm} className="w-full bg-primary hover:bg-orange-glow text-primary-foreground">
-            Get a Quote
+            Küsi pakkumist
           </Button>
         </div>
       )}

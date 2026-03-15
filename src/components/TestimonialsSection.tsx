@@ -5,43 +5,43 @@ const testimonials = [
     name: "Andres K.",
     source: "Google",
     rating: 5,
-    text: "They responded within a minute of my inquiry. The roof is perfect — no leaks after two Estonian winters. Truly outstanding craftsmanship.",
-    project: "Full Roof Replacement",
+    text: "Nad vastasid minuti jooksul pärast mu päringut. Katus on täiuslik — ei mingeid lekkeid kahe Eesti talve järel. Tõeliselt silmapaistev käsitöö.",
+    project: "Katuse täisvahetus",
   },
   {
     name: "Maria L.",
     source: "Facebook",
     rating: 5,
-    text: "I was skeptical at first, but they delivered ahead of schedule and under budget. Our energy bill dropped noticeably after the new insulation.",
-    project: "Insulated Roofing",
+    text: "Olin alguses skeptiline, kuid nad tegid töö valmis enne tähtaega ja eelarvest väiksema summaga. Meie energiaarve langes märgatavalt pärast uut soojustust.",
+    project: "Soojustatud katus",
   },
   {
     name: "Toomas R.",
     source: "Google",
     rating: 5,
-    text: "Professional from start to finish. They sent a detailed quote the same day I called. Five contractors ghosted me — these guys showed up.",
-    project: "Commercial Flat Roof",
+    text: "Professionaalsed algusest lõpuni. Nad saatsid üksikasjaliku pakkumise samal päeval, kui helistasin. Viis ehitajat ignoreerisid mind — need mehed tulid kohale.",
+    project: "Ärihoone lamekatus",
   },
   {
     name: "Katrin S.",
     source: "Google",
     rating: 5,
-    text: "Beautiful metal roof installed in just 4 days. The team was clean, organized, and respectful. Highly recommend to anyone in Tallinn.",
-    project: "Metal Roofing",
+    text: "Ilus metallkatus paigaldati vaid 4 päevaga. Meeskond oli korralik, organiseeritud ja lugupidav. Soovitan soojalt kõigile Tallinnas.",
+    project: "Metallkatus",
   },
   {
     name: "Peeter V.",
     source: "Facebook",
     rating: 5,
-    text: "Their 25-year warranty gave us peace of mind. It's been 3 years and the roof looks brand new. Worth every cent.",
-    project: "Tile Roof Renovation",
+    text: "Nende 25-aastane garantii andis meile meelerahu. On möödunud 3 aastat ja katus näeb välja nagu uus. Iga sent seda väärt.",
+    project: "Kivikatuse renoveerimine",
   },
   {
     name: "Liis M.",
     source: "Google",
     rating: 5,
-    text: "The price estimator on their site was spot-on. No surprises, no hidden costs. That transparency is rare in construction.",
-    project: "Roof Repair",
+    text: "Nende veebilehe hinnakalkulaator oli täpne. Ei mingeid üllatusi, ei mingeid varjatud kulusid. Selline läbipaistvus on ehituses haruldane.",
+    project: "Katuse remont",
   },
 ];
 
@@ -56,10 +56,10 @@ const TestimonialsSection = () => {
       <div className="container-narrow">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl">
-            Why <span className="text-primary">100+ Homeowners</span> Picked Us
+            Miks <span className="text-primary">100+ koduomanikku</span> valis meid
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Real reviews from real Estonian homeowners. No fakes, no fluff.
+            Tõelised arvustused tõelistelt Eesti koduomanikelt. Ei mingit võltsi ega liialdust.
           </p>
         </div>
 
